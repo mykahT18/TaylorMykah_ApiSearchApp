@@ -24,3 +24,58 @@ nav {
 a {
   text-decoration: none;
   color: #fff; }
+
+footer {
+  background: black;
+  color: white;
+  text-align: center; }
+  footer p {
+    color: white;
+    padding: 2rem; }
+
+p {
+  color: white; }
+
+.searchInput {
+  display: block;
+  width: 40rem;
+  height: 4rem; }
+
+label {
+  background-color: black;
+  padding: 0.2rem 0.6rem; }
+
+form {
+  padding: 2rem 49rem; }
+
+.results {
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  padding-top: 3rem; }
+
+article {
+  position: relative;
+  background-color: gray;
+  width: calc(100%/3 - 2rem);
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  float: left;
+  height: 25rem; }
+
+.results::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+article img {
+  position: center;
+  position: absolute;
+  top: 0.3rem;
+  left: 16rem; }
+
+h3 {
+  margin-top: 8rem; }
+
+.search-button {
+  float: left; }
