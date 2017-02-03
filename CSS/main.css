@@ -1,0 +1,26 @@
+html {
+  /*Default is 16px*/
+  font-size: 62.5%; }
+
+body {
+  font: 1.6rem/1.25 "Program OT", Arial, sans-serif;
+  margin: 0; }
+
+header {
+  background-image: url(/images/concert-photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 0rem -29rem;
+  padding-bottom: 20rem; }
+
+nav {
+  text-align: right;
+  padding: 2rem 2rem; }
+  nav ul li {
+    display: inline;
+    padding: 1rem; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
