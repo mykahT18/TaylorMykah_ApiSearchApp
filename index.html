@@ -1,13 +1,13 @@
 <html>
 <head>
-	<link rel="stylesheet" href="CSS/reset.css">
+	<!-- <link rel="stylesheet" href="CSS/reset.css"> -->
 	<link rel="stylesheet" href="CSS/main.css">
 	<meta charset="UTF-8">
 	<title>API Search APP</title>
 </head>
 <body>
 	<header>
-		<nav>
+		<nav class="main">
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">About</a></li>
@@ -19,8 +19,9 @@
 	<form action="">
 		<p>
 			<label for="searchInput">Search for albumns from your favorite band</label>
-			<input type="text" id="searchInput">
+			<input class="searchInput" type="text">
 		</p>
+		<button class="search-button">Search</button>
 	</form>
 
 
@@ -29,5 +30,8 @@
 	<footer>
 		<p>Built by Mykah Taylor for DWS2</p>
 	</footer>
+
+	<script src="script/content.js"></script>
+
 </body>
 </html>
