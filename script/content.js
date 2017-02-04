@@ -1,9 +1,11 @@
 var submit = document.querySelector('.search-button');
 var search = document.querySelector('.searchInput');
 var resultItems = document.querySelector('.results');
+var message = document.querySelector('.messageResults');
 
 submit.addEventListener('click', function(e){
 	e.preventDefault();
+	resultItems.innerHTML='';
 	var query = search.value;
 	var limit = "9";
 	var type = "album";
@@ -32,23 +34,27 @@ function makeRequest(url){
 	request.send();
 	// console.log("anything")
 }
-function renderPage(results, re){
+function renderPage(results){
 
 	var listItem = "";
-		console.log(re)
 
+	message.innerHTML= 'Results for ' + search.value;
+	console.log(message);
 		for (var i = 0; i < results.length; i++) {
-			
+			// console.log(results[i]);
 
 			listItem += '<article>';
-			listItem += '<img src="'+ results[i].artists.images +'" alt="" />';
+			listItem += '<img src="'+ results[i].images[0].url +'" alt="" />';
+			listItem += '<div>';
 			listItem += '<h3>' + results[i].name + '</h3>';
-			listItem += '<p>' + results[i].artists.name + '</p>';
+			listItem += '<p>' + results[i].artists[0].name + '</p>';
+			listItem += '</div>';
 			listItem += '</article>';
 				
 		}
 
-		resultItems.insertAdjacentHTML('beforeend', listItem);
+		resultItems.insertAdjacentHTML('afterbegin', listItem);
+		resultItems.insertAdjacentHTML('beforebegin', message);
 	
 }
 
