@@ -39,7 +39,7 @@ function renderPage(results){
 	var listItem = "";
 
 	message.innerHTML= 'Results for ' + search.value;
-	// console.log(message);
+	console.log(message);
 		for (var i = 0; i < results.length; i++) {
 			// console.log(results[i]);
 			if(results.length > 0)
