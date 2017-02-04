@@ -1,3 +1,62 @@
+.results::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+article img {
+  width: 100%;
+  position: relative; }
+
+label {
+  background-color: #000000;
+  padding: 0.3rem 0.6rem; }
+
+form {
+  width: 100%;
+  margin-left: 25rem; }
+
+form p {
+  float: left;
+  display: inline-block; }
+
+.search-button {
+  margin-top: 2.5rem;
+  margin-left: 0.5rem;
+  border: none;
+  color: black;
+  background: #84bd00;
+  padding: 0.9rem 4.8rem;
+  border-radius: 0.2rem;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold; }
+
+.searchInput {
+  display: block;
+  width: 25rem;
+  height: 3rem;
+  outline: none;
+  border: none; }
+
+article div {
+  background: #84bd00;
+  position: absolute;
+  bottom: 0px;
+  width: 100%; }
+
+input::-webkit-input-placeholder {
+  font-size: 1rem; }
+
+nav::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+form::after {
+  content: "";
+  display: block;
+  clear: both; }
+
 html {
   font-family: "Program OT", Arial, sans-serif;
   font-size: 16px;
@@ -5,13 +64,22 @@ html {
 
 body {
   margin: 0px 0px;
-  max-width: 1100%; }
+  max-width: 1100%;
+  background: #000000; }
+
+header .logo {
+  color: #ffffff;
+  background-image: url(/images/turntable.png);
+  background-repeat: no-repeat;
+  text-indent: 33px;
+  float: left;
+  margin: 1rem 8rem; }
 
 a {
   text-decoration: none;
-  color: white; }
+  color: #ffffff; }
   a:hover {
-    color: orange; }
+    color: #84bd00; }
 
 .results {
   margin-right: auto;
@@ -19,17 +87,44 @@ a {
   width: 80%;
   padding-top: 3rem; }
 
-.results::after {
-  content: "";
-  display: block;
-  clear: both; }
+p {
+  color: #ffffff; }
+
+article {
+  position: relative;
+  width: calc(100%/3 - 2rem);
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  float: left;
+  min-height: 24rem; }
+
+.results div h3 {
+  color: black;
+  margin-top: 0;
+  margin-left: 0.9rem;
+  margin-bottom: 0; }
+
+article p {
+  color: #000000;
+  padding: 0rem 0.9rem;
+  margin: 0; }
+
+.results h2 {
+  color: #84bd00;
+  background-color: #ecebe8;
+  padding: 1rem;
+  width: 67rem; }
 
 nav {
   text-align: right;
   padding: 2rem 2rem; }
   nav ul li {
-    display: inline;
+    display: inline-block;
     padding: 1rem; }
+
+ul {
+  float: right;
+  display: inline-block; }
 
 header {
   background-image: url(/images/concert-photo.jpg);
@@ -40,64 +135,8 @@ header {
   padding-bottom: 5rem; }
 
 footer {
-  background: black;
-  color: white;
+  background: #84bd00;
+  color: #ffffff;
   text-align: center; }
   footer p {
     padding: 1.5rem; }
-
-p {
-  color: white; }
-
-.searchInput {
-  display: block;
-  width: 25rem;
-  height: 3rem;
-  outline: none;
-  border: none; }
-
-label {
-  background-color: black;
-  padding: 0.3rem 0.6rem; }
-
-form {
-  width: 100%;
-  margin-left: 30rem; }
-
-article {
-  position: relative;
-  width: calc(100%/3 - 2rem);
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-  float: left;
-  min-height: 24rem; }
-
-article img {
-  width: 100%;
-  position: relative; }
-
-article p {
-  color: #111;
-  padding: 0rem 0.9rem;
-  margin: 0; }
-
-.results div h3 {
-  color: black;
-  margin-top: 0;
-  margin-left: 0.9rem;
-  margin-bottom: 0; }
-
-.search-button {
-  float: left;
-  border: none;
-  color: black;
-  background: yellow;
-  padding: 1rem 11.4rem;
-  border-radius: 0.2rem;
-  outline: none; }
-
-article div {
-  background: yellow;
-  position: absolute;
-  bottom: 0px;
-  width: 100%; }

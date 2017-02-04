@@ -1,96 +1,20 @@
-
+// @import 'base/reset';
 //Utilities
+@import 'Utilities/vars';
 @import 'Utilities/mixins';
 @import 'Utilities/placeholders';
-@import 'Utilities/vars';
+
 
 
 // base style
 @import 'base/base';
 
 
+
 // layout
 @import 'layout/nav';
 
-header{
-	background-image: url(/images/concert-photo.jpg);
-	background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center;
-    background-position: 0rem -17rem;
-    padding-bottom: 5rem;
-}
 
-footer{
-	background: black;
-	color: white;
-	text-align: center;
-	p{
-		// color:white;
-		padding: 1.5rem;
-	}
-}
-p{
-	color: white;
-}
-.searchInput{
-	display: block;
-    width: 25rem;
-    height: 3rem;
-    outline: none;
-    border: none;
-}
-label{
-	background-color: black;
-	padding: 0.3rem 0.6rem;
-
-}
-form{
-	width: 100%;
-	margin-left: 30rem;
-}
-article{
-	position: relative;
-	width: calc(100%/3 - 2rem);
-	margin-right: 2rem;
-	margin-bottom: 2rem;
-	float: left;
-	min-height: 24rem;
-	
-}
-
-article img{
-	width: 100%;  
-	position: relative; 
-}
-
-article p{
-	color: #111;
-	padding: 0rem 0.9rem;
-    margin: 0;
-}
-.results div h3{
-	color: black;
-	margin-top: 0;
-    margin-left: 0.9rem;
-    margin-bottom: 0;
-	
-}
-.search-button{
-	float: left;
-	border: none;
-    color: black;
-    background: yellow;
-    padding: 1rem 11.4rem;
-    border-radius: 0.2rem;
-    outline: none;
-}
-article div{
-	background: yellow;
-	position: absolute;
-    bottom: 0px;
-    width: 100%;
-}
 
 
 

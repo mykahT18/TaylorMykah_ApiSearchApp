@@ -3,7 +3,29 @@ nav {
 	padding: 2rem 2rem;
 
 	ul li{
-		display: inline;
+		display: inline-block;
 		padding: 1rem;
 	}
 }
+ul{
+	float: right;
+	display: inline-block;
+}
+header{
+	background-image: url(/images/concert-photo.jpg);
+	background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-position: 0rem -17rem;
+    padding-bottom: 5rem;
+}
+
+footer{
+	background: $color-prime;
+	color: $font-color-prime;
+	text-align: center;
+	p{
+		padding: 1.5rem;
+	}
+}
+

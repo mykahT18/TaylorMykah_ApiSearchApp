@@ -39,22 +39,31 @@ function renderPage(results){
 	var listItem = "";
 
 	message.innerHTML= 'Results for ' + search.value;
-	console.log(message);
+	// console.log(message);
 		for (var i = 0; i < results.length; i++) {
 			// console.log(results[i]);
-
-			listItem += '<article>';
-			listItem += '<img src="'+ results[i].images[0].url +'" alt="" />';
-			listItem += '<div>';
-			listItem += '<h3>' + results[i].name + '</h3>';
-			listItem += '<p>' + results[i].artists[0].name + '</p>';
-			listItem += '</div>';
-			listItem += '</article>';
+			if(results.length > 0)
+			{
+				listItem += '<article>';
+				listItem += '<img src="'+ results[i].images[0].url +'" alt="" />';
+				listItem += '<div>';
+				listItem += '<h3>' + results[i].name + '</h3>';
+				listItem += '<p>' + results[i].artists[0].name + '</p>';
+				listItem += '</div>';
+				listItem += '</article>';
+			}
+			else
+			{
+				message.innerHTML= 'Sorry! No results for ' + search.value;
+				
+			}
 				
 		}
 
 		resultItems.insertAdjacentHTML('afterbegin', listItem);
-		resultItems.insertAdjacentHTML('beforebegin', message);
+		resultItems.insertBefore(message, resultItems.firstChild);
+		
+		
 	
 }
 
@@ -63,6 +72,6 @@ function renderPage(results){
 // results.forEach((result, index, array) => {
 // 		var listItem = document.createElement('li');
 // 		listItem.innerHTML = result.name;
-// 		resultItems.appendChild(listItem);
+// 		
 
 	// })
