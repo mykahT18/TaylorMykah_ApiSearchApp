@@ -7,7 +7,7 @@ submit.addEventListener('click', function(e){
 	e.preventDefault();
 	resultItems.innerHTML='';
 	var query = search.value;
-	var limit = "9";
+	var limit = "15";
 	var type = "album";
 	var api = `https://api.spotify.com/v1/search?query=${query}&offset=0&limit=${limit}&type=${type}`;
 	console.log(api);
@@ -40,10 +40,11 @@ function renderPage(results){
 
 	message.innerHTML= 'Results for ' + search.value;
 	console.log(message);
+	if(results.length > 0){
 		for (var i = 0; i < results.length; i++) {
 			// console.log(results[i]);
-			if(results.length > 0)
-			{
+			
+			
 				listItem += '<article>';
 				listItem += '<img src="'+ results[i].images[0].url +'" alt="" />';
 				listItem += '<div>';
@@ -51,15 +52,13 @@ function renderPage(results){
 				listItem += '<p>' + results[i].artists[0].name + '</p>';
 				listItem += '</div>';
 				listItem += '</article>';
-			}
-			else
+				
+		}
+	}else
 			{
 				message.innerHTML= 'Sorry! No results for ' + search.value;
 				
 			}
-				
-		}
-
 		resultItems.insertAdjacentHTML('afterbegin', listItem);
 		resultItems.insertBefore(message, resultItems.firstChild);
 		
