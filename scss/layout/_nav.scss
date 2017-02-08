@@ -12,7 +12,13 @@ header{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 2rem;
+    @include padding(2rem, 0rem, 2rem, 0rem);
+
+
+	@include screen(med){
+		padding-top: 6rem;
+    	padding-bottom: 6rem;
+	}
 }
 
 footer{

@@ -67,6 +67,9 @@ body {
   margin: 0px 0px;
   font-size: 1.2rem;
   width: 100%; }
+  @media only screen and (min-width: 1000px) {
+    body {
+      background-color: black; } }
 
 header .logo {
   color: #ffffff;
@@ -87,36 +90,16 @@ a {
     color: #84bd00; }
 
 .results {
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem; }
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 article img {
   width: 50%;
   height: 100%; }
-
-.input-holder {
-  color: #ffffff; }
-
-label {
-  background-color: #000000;
-  padding: 0.5rem 0.2rem;
-  margin-left: 1rem;
-  font-size: 1.2rem; }
-  @media (min-width: 600px) {
-    label {
-      margin-top: 0rem;
-      margin-right: 0rem;
-      margin-bottom: 0.5rem;
-      margin-left: 3rem; } }
-
-form {
-  margin-top: 4rem;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row; }
 
 article div h3 {
   margin-top: 0.8rem;
@@ -136,43 +119,94 @@ article {
   background: #84bd00;
   display: -ms-flexbox;
   display: flex;
-  margin: 0.3rem; }
+  width: 100%;
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  margin-left: auto; }
+  @media only screen and (min-width: 600px) {
+    article {
+      -ms-flex-preferred-size: 48%;
+          flex-basis: 48%; } }
+  @media only screen and (min-width: 1000px) {
+    article {
+      -ms-flex-preferred-size: 32%;
+          flex-basis: 32%; } }
+
+form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+  margin-top: 4rem;
+  margin-right: auto;
+  margin-bottom: 0rem;
+  margin-left: auto; }
+
+.label-holder {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1.2rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding-top: 1rem;
+  padding-right: 0rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.4rem; }
+
+.button-holder {
+  -ms-flex: 1 0 90px;
+      flex: 1 0 90px; }
+
+.input-holder {
+  color: #ffffff;
+  -ms-flex: 2 0 250px;
+      flex: 2 0 250px; }
+
+.search-button {
+  margin-top: 0rem;
+  margin-right: 2.3rem;
+  margin-bottom: 2rem;
+  margin-left: 0rem;
+  border: none;
+  background-color: #84bd00;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-right: 0rem;
+  padding-bottom: 1.5rem;
+  padding-left: 0rem; }
+  @media only screen and (min-width: 600px) {
+    .search-button {
+      padding-top: 2rem;
+      padding-right: 0rem;
+      padding-bottom: 2rem;
+      padding-left: 0rem; } }
+
+.search-button:hover {
+  background: #ecebe8; }
 
 .searchInput {
-  margin-top: 0.6rem;
-  margin-right: 1.8rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  padding-top: 1rem;
-  padding-right: 5.4rem;
-  padding-bottom: 0.7rem;
-  padding-left: 5.4rem;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  padding-top: 1.5rem;
+  padding-right: 0rem;
+  padding-bottom: 1.3rem;
+  padding-left: 0rem;
   outline: none;
   border: none;
   text-align: center;
-  width: 89.6%; }
-  @media (min-width: 600px) {
+  width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; }
+  @media only screen and (min-width: 600px) {
     .searchInput {
-      margin-top: 0rem;
-      margin-right: 0rem;
-      margin-bottom: 0.5rem;
-      margin-left: 3rem; } }
-
-.search-button {
-  margin-top: 1.8rem;
-  margin-right: 2.3rem;
-  margin-bottom: 1rem;
-  margin-left: 0rem;
-  border: none;
-  padding: 0.8rem 0.6rem;
-  width: 17.9%; }
-  @media (min-width: 600px) {
-    .search-button {
-      margin-top: 1.1rem;
-      margin-right: 2.3rem;
-      margin-bottom: 1rem;
-      margin-left: 0rem;
-      padding-top: 1.2rem; } }
+      padding-top: 2rem;
+      padding-right: 0rem;
+      padding-bottom: 1.8rem;
+      padding-left: 0rem; } }
 
 .messageResults {
   background-color: #e8e8e8;
@@ -180,10 +214,9 @@ article {
   padding-right: 3.9rem;
   padding-bottom: 1rem;
   padding-left: 3.9rem;
-  padding: 1rem 3.9rem; }
-  @media (min-width: 600px) {
-    .messageResults {
-      text-align: center; } }
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center; }
 
 nav ul li {
   display: none; }
@@ -193,7 +226,14 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  padding-right: 0rem;
+  padding-bottom: 2rem;
+  padding-left: 0rem; }
+  @media only screen and (min-width: 600px) {
+    header {
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
 
 footer {
   background: #84bd00;

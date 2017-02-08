@@ -8,6 +8,11 @@ body {
 	margin: 0px 0px;
 	font-size: $font-size;
 	width: 100%;
+
+	@include screen(large){
+
+		background-color: black;
+	}
 }
 header .logo{
     color: $font-color-prime;
@@ -31,29 +36,14 @@ a{
 }
 // section
 .results{
-
-	@include margin(1rem, 1rem, 1rem, 1rem);
+	display: flex;
+	flex-basis: 100%;
+	flex-wrap: wrap;
+	
 }
 article img{
     width: 50%;
     height: 100%;
-}
-.input-holder{
-	color: $font-color-prime;
-}
-label{
-	background-color: $bg-color;
-	padding: 0.5rem 0.2rem;
-	margin-left: 1rem;
-	font-size: $font-size;
-	@media (min-width: 600px){
-		@include margin(0rem, 0rem, 0.5rem, 3rem);
-	}
-}
-form{
-	margin-top: 4rem;
-	display: flex;
-	flex-direction: row;
 }
 article div {
 	h3{
@@ -68,38 +58,77 @@ article div {
 article {
 	background: $color-prime;
 	display: flex;
-	// width: 100%;
-	margin: 0.3rem;
-}
+	width: 100%;
+    @include margin(1rem, auto, 1rem, auto);
 
-.searchInput{
-	@include margin(0.6rem, 1.8rem, 1rem, 1rem);
-	@include padding(1rem, 5.4rem, 0.7rem, 5.4rem);
-	outline: none;
-	border: none;
-	text-align: center;
-	width: 89.6%;
-	@media (min-width: 600px){
-		@include margin(0rem, 0rem, 0.5rem, 3rem);
+	@include screen(med){
+
+		flex-basis: 48%;
 	}
+	@include screen(large){
+
+		flex-basis: 32%;
+	}
+	
+}
+//==========Form=========//
+form{
+	display: flex;
+	flex-wrap: wrap;
+	width: 80%;
+    @include margin(4rem, auto, 0rem, auto);
+}
+.label-holder{
+	background-color: $bg-color;
+	color: $font-color-prime;
+	font-size: $font-size;
+	flex-basis: 100%;
+	@include padding(1rem, 0rem, 0.2rem, 0.4rem);
+}
+.button-holder{
+	flex: 1 0 90px;
+
+}
+.input-holder{
+	color: $font-color-prime;
+	flex: 2 0 250px;
 }
 .search-button{
-	@include margin(1.8rem, 2.3rem, 1rem, 0rem);
+	@include margin(0rem, 2.3rem, 2rem, 0rem);
     border: none;
-    padding: 0.8rem 0.6rem;
-    width: 17.9%;
-    @media (min-width: 600px){
-    	@include margin(1.1rem, 2.3rem, 1rem, 0rem);
-    	padding-top: 1.2rem;
+    background-color: $color-prime;
+    flex-basis: 100%;
+    width: 100%;
+    @include padding(1.5rem, 0rem, 1.5rem, 0rem);
+
+     @include screen(med){
+
+    	 @include padding(2rem, 0rem, 2rem, 0rem);
     }
+}
+.search-button:hover{
+	background: $color-second;
+}
+.searchInput{
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    @include padding(1.5rem, 0rem, 1.3rem, 0rem);
+    outline: none;
+    border: none;
+    text-align: center;
+    width: 100%;
+    flex-basis: 100%;
+
+     @include screen(med){
+
+    	 @include padding(2rem, 0rem, 1.8rem, 0rem);
+    }
+
 }
 .messageResults{
 	background-color: #e8e8e8;
 	@include padding(1rem, 3.9rem, 1rem, 3.9rem);
-	padding: 1rem 3.9rem;
-
-	@media(min-width: 600px){
-		text-align: center;
-	}
+	flex-basis: 100%;
+	text-align: center;
 }
 
