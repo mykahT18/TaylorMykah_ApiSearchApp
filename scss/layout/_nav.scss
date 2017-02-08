@@ -1,8 +1,7 @@
 nav {
 	
-
 	ul li{
-		
+		display: none;
 	}
 }
 ul{
@@ -24,7 +23,7 @@ footer{
 	p{
 		padding: 1rem 0.3rem;
 		text-align: center;
-		font-size: $phone-font-size;
+		font-size: $font-size;
 	}
 }
 

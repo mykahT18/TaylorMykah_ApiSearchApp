@@ -65,19 +65,20 @@ html {
 
 body {
   margin: 0px 0px;
+  font-size: 1.2rem;
   width: 100%; }
 
 header .logo {
   color: #ffffff;
   background-image: url(../images/turntable.png);
   background-repeat: no-repeat;
-  font-size: 1.2rem;
-  text-indent: 35px;
+  text-indent: 32px;
   margin-left: 3rem;
-  padding-top: 0.6rem;
+  padding-top: 1.6rem;
   position: absolute;
-  top: 0.9rem;
-  left: 1rem; }
+  top: 0.5rem;
+  left: 6rem;
+  font-size: 1.8rem; }
 
 a {
   text-decoration: none;
@@ -85,42 +86,107 @@ a {
   a:hover {
     color: #84bd00; }
 
-p {
+.results {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem; }
+
+article img {
+  width: 50%;
+  height: 100%; }
+
+.input-holder {
   color: #ffffff; }
 
 label {
   background-color: #000000;
-  padding: 0.2rem 0.2rem;
-  margin-left: 0.4rem;
+  padding: 0.5rem 0.2rem;
+  margin-left: 1rem;
   font-size: 1.2rem; }
+  @media (min-width: 600px) {
+    label {
+      margin-top: 0rem;
+      margin-right: 0rem;
+      margin-bottom: 0.5rem;
+      margin-left: 3rem; } }
 
 form {
   margin-top: 4rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-align: center;
-      align-items: center; }
+      flex-direction: row; }
 
-article div {
-  background: #84bd00;
-  width: 100%; }
-
-.searchInput {
-  margin-top: 0rem;
+article div h3 {
+  margin-top: 0.8rem;
   margin-right: 0rem;
   margin-bottom: 0.5rem;
-  margin-left: 0.4rem;
+  margin-left: 0.5rem;
+  font-weight: bold; }
+
+article div p {
+  margin-top: 0.8rem;
+  margin-right: 0rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  font-weight: none; }
+
+article {
+  background: #84bd00;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.3rem; }
+
+.searchInput {
+  margin-top: 0.6rem;
+  margin-right: 1.8rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 5.4rem;
+  padding-bottom: 0.7rem;
+  padding-left: 5.4rem;
   outline: none;
   border: none;
-  padding: 0.4rem 2.3rem;
-  text-align: center; }
+  text-align: center;
+  width: 89.6%; }
+  @media (min-width: 600px) {
+    .searchInput {
+      margin-top: 0rem;
+      margin-right: 0rem;
+      margin-bottom: 0.5rem;
+      margin-left: 3rem; } }
 
 .search-button {
+  margin-top: 1.8rem;
+  margin-right: 2.3rem;
+  margin-bottom: 1rem;
+  margin-left: 0rem;
   border: none;
-  padding: 0.7rem 0.4rem;
-  margin-right: 0.2rem; }
+  padding: 0.8rem 0.6rem;
+  width: 17.9%; }
+  @media (min-width: 600px) {
+    .search-button {
+      margin-top: 1.1rem;
+      margin-right: 2.3rem;
+      margin-bottom: 1rem;
+      margin-left: 0rem;
+      padding-top: 1.2rem; } }
+
+.messageResults {
+  background-color: #e8e8e8;
+  padding-top: 1rem;
+  padding-right: 3.9rem;
+  padding-bottom: 1rem;
+  padding-left: 3.9rem;
+  padding: 1rem 3.9rem; }
+  @media (min-width: 600px) {
+    .messageResults {
+      text-align: center; } }
+
+nav ul li {
+  display: none; }
 
 header {
   background-image: url(../images/concert-photo.jpg);

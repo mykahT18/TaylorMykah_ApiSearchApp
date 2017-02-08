@@ -6,20 +6,20 @@ html {
 }
 body {
 	margin: 0px 0px;
-	// background: $bg-color;
+	font-size: $font-size;
 	width: 100%;
 }
 header .logo{
     color: $font-color-prime;
     background-image: url(../images/turntable.png);
     background-repeat: no-repeat;
-    font-size: 1.2rem;
-    text-indent: 35px;
+    text-indent: 32px;
     margin-left: 3rem;
-    padding-top: 0.6rem;
+    padding-top: 1.6rem;
     position: absolute;
-    top: 0.9rem;
-    left: 1rem;
+    top: 0.5rem;
+    left: 6rem;
+    font-size: 1.8rem;
 }
 a{
 	text-decoration: none;
@@ -31,51 +31,75 @@ a{
 }
 // section
 .results{
-	
 
-}
-p{
-	color: $font-color-prime;
+	@include margin(1rem, 1rem, 1rem, 1rem);
 }
 article img{
-	 
-	 
+    width: 50%;
+    height: 100%;
+}
+.input-holder{
+	color: $font-color-prime;
 }
 label{
 	background-color: $bg-color;
-	padding: 0.2rem 0.2rem;
-	margin-left: 0.4rem;
-	font-size: $phone-font-size;
+	padding: 0.5rem 0.2rem;
+	margin-left: 1rem;
+	font-size: $font-size;
+	@media (min-width: 600px){
+		@include margin(0rem, 0rem, 0.5rem, 3rem);
+	}
 }
 form{
 	margin-top: 4rem;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-
 }
-article div{
+article div {
+	h3{
+		@include margin(0.8rem, 0rem, 0.5rem, 0.5rem);
+		font-weight: bold;
+	}
+	p{
+		@include margin(0.8rem, 0rem, 0.5rem, 0.5rem);
+		font-weight: none;
+	}
+}
+article {
 	background: $color-prime;
-    width: 100%;
+	display: flex;
+	// width: 100%;
+	margin: 0.3rem;
 }
-input::-webkit-input-placeholder{
-	
-}
+
 .searchInput{
-	@include margin(0rem, 0rem, 0.5rem, 0.4rem);
-	// margin-left: 0.4rem;
+	@include margin(0.6rem, 1.8rem, 1rem, 1rem);
+	@include padding(1rem, 5.4rem, 0.7rem, 5.4rem);
 	outline: none;
 	border: none;
-    padding: 0.4rem 2.3rem;
-	// margin-bottom: 0.5rem;
-	// background-color: blue;
 	text-align: center;
+	width: 89.6%;
+	@media (min-width: 600px){
+		@include margin(0rem, 0rem, 0.5rem, 3rem);
+	}
 }
 .search-button{
-	// background: red;
+	@include margin(1.8rem, 2.3rem, 1rem, 0rem);
     border: none;
-    padding: 0.7rem 0.4rem;
-    margin-right: 0.2rem;
-    
+    padding: 0.8rem 0.6rem;
+    width: 17.9%;
+    @media (min-width: 600px){
+    	@include margin(1.1rem, 2.3rem, 1rem, 0rem);
+    	padding-top: 1.2rem;
+    }
+}
+.messageResults{
+	background-color: #e8e8e8;
+	@include padding(1rem, 3.9rem, 1rem, 3.9rem);
+	padding: 1rem 3.9rem;
+
+	@media(min-width: 600px){
+		text-align: center;
+	}
 }
 
