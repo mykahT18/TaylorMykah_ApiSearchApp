@@ -5,26 +5,14 @@ html {
   min-width: 320px;
 }
 body {
-	margin: 0px 0px;
+	@include margin(0rem, 0rem, 0rem, 0rem);
 	font-size: $font-size;
 	width: 100%;
 
 	@include screen(large){
 
-		background-color: black;
+		background-color: $bg-color;
 	}
-}
-header .logo{
-    color: $font-color-prime;
-    background-image: url(../images/turntable.png);
-    background-repeat: no-repeat;
-    text-indent: 32px;
-    margin-left: 3rem;
-    padding-top: 1.6rem;
-    position: absolute;
-    top: 0.5rem;
-    left: 6rem;
-    font-size: 1.8rem;
 }
 a{
 	text-decoration: none;
@@ -61,11 +49,13 @@ article div {
 		font-weight: none;
 	}
 }
+
 article {
 	background: $color-prime;
 	display: flex;
 	width: 100%;
     @include margin(1rem, auto, 1rem, auto);
+    @include padding(0rem, 0rem, 1rem, 0rem);
 
 	@include screen(med){
 
@@ -93,6 +83,11 @@ form{
 	font-size: $font-size;
 	flex-basis: 100%;
 	@include padding(1rem, 0rem, 0.2rem, 0.4rem);
+
+	@include screen(med){
+
+    	 font-size: 1.6rem;
+    }
 }
 .button-holder{
 	flex: 1 0 90px;
@@ -108,6 +103,7 @@ form{
     background-color: $color-prime;
     flex-basis: 100%;
     width: 100%;
+    font-size: 1.6em;
     @include padding(1.5rem, 0rem, 1.5rem, 0rem);
 
      @include screen(med){
@@ -127,6 +123,7 @@ form{
     text-align: center;
     width: 100%;
     flex-basis: 100%;
+    font-size: 1.5em;
 
      @include screen(med){
 

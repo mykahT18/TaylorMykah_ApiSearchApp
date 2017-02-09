@@ -1,35 +1,55 @@
 nav {
-	// background: purple;
-	padding: 2rem 0rem;
-    position: relative;
+	position: relative;
+	@include padding(1rem, 0rem, 1rem, 0rem);
     top: -20px;
 
 	ul li{
 		display: none;
-		float: right;
-   	 	padding-left: 1rem;
-    	margin-right: 2rem;
+		@include padding(0rem, 0rem, 0rem, 1rem);
+		@include margin(0rem, 2rem, 0rem, 0rem);
+    	text-align: right;
 
     	@include screen(med){
 		display: inline;
+		float: right;
+		font-size: 1.6rem;
+		
 	}
 
-	}
+}
 
 	&:after{@extend %clear};
 }
+.mainNav.active{
+	position: absolute;
+	background: #333;   
+    width: 100%;
+    height: 20.2rem;
 
+    ul{
+    	@include padding(4rem, 1rem, 1rem, 0rem);
+    }
+    .logo{
+    	display: none;
+    }
+    @media(min-width: 425px){
+    	height: 15.4rem;
+    }
+}
 .active li{
-	display: inline-block;
+	display: block;
+	line-height: 3.5rem;
+	font-size: 2rem;
 	
 }
 .ham {
+
+	float: right;
 	background-image: url(../images/hamburger.png);
 	background-repeat: no-repeat;
 	background-size: contain;
-	padding: 1rem;
-	float: right;
-	margin-right: 1rem;
+	@include padding(1rem, 1rem, 1rem, 1rem);
+	@include margin(2rem, 2rem, 0rem, 0rem);
 
 	@include screen(med){
 		display: none;
@@ -48,18 +68,34 @@ header{
 
 
 	@include screen(med){
-		padding-top: 6rem;
-    	padding-bottom: 6rem;
+
+		@include padding(6rem, 0rem, 6rem, 0rem);
 	}
+}
+header .logo{
+	position: absolute;
+    color: $font-color-prime;
+    background-image: url(../images/turntable.png);
+    background-repeat: no-repeat;
+    text-indent: 32px;
+    @include margin(0rem, 0rem, 0rem, 3rem);
+    @include padding(1.6rem, 0rem, 0rem, 0rem);
+    top: 1.5rem;
+    left: 6rem;
+    font-size: 1.8rem;
+
+    @include screen(med){
+    	top: 0rem;
+    }
+
 }
 
 footer{
 	background: $color-prime;
 	color: $font-color-prime;
-	// width: 100%;
 	
 	p{
-		padding: 1rem 0.3rem;
+		@include padding(2rem, 0.3rem, 2rem, 0.3rem);
 		text-align: center;
 		font-size: $font-size;
 	}
