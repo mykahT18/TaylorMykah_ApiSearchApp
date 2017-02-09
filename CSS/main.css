@@ -57,6 +57,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+nav:after {
+  content: "";
+  display: block;
+  clear: both; }
+
 html {
   font-family: "Program OT", Arial, sans-serif;
   font-size: 62.5%;
@@ -95,18 +100,24 @@ a {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  min-height: 50rem; }
 
 article img {
   width: 50%;
   height: 100%; }
+  @media only screen and (min-width: 600px) {
+    article img {
+      width: 100%;
+      height: auto; } }
 
 article div h3 {
   margin-top: 0.8rem;
   margin-right: 0rem;
   margin-bottom: 0.5rem;
   margin-left: 0.5rem;
-  font-weight: bold; }
+  font-weight: bold;
+  text-transform: uppercase; }
 
 article div p {
   margin-top: 0.8rem;
@@ -127,7 +138,11 @@ article {
   @media only screen and (min-width: 600px) {
     article {
       -ms-flex-preferred-size: 48%;
-          flex-basis: 48%; } }
+          flex-basis: 48%;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
   @media only screen and (min-width: 1000px) {
     article {
       -ms-flex-preferred-size: 32%;
@@ -139,7 +154,7 @@ form {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 80%;
-  margin-top: 4rem;
+  margin-top: 0rem;
   margin-right: auto;
   margin-bottom: 0rem;
   margin-left: auto; }
@@ -210,16 +225,48 @@ form {
 
 .messageResults {
   background-color: #e8e8e8;
-  padding-top: 1rem;
+  padding-top: 3rem;
   padding-right: 3.9rem;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
   padding-left: 3.9rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  text-align: center; }
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem; }
+  @media only screen and (min-width: 600px) {
+    .messageResults {
+      font-size: 3rem; } }
 
-nav ul li {
-  display: none; }
+nav {
+  padding: 2rem 0rem;
+  position: relative;
+  top: -20px; }
+  nav ul li {
+    display: none;
+    float: right;
+    padding-left: 1rem;
+    margin-right: 2rem; }
+    @media only screen and (min-width: 600px) {
+      nav ul li {
+        display: inline; } }
+
+.active li {
+  display: inline-block; }
+
+.ham {
+  background-image: url(../images/hamburger.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 1rem;
+  float: right;
+  margin-right: 1rem; }
+  @media only screen and (min-width: 600px) {
+    .ham {
+      display: none; } }
+
+.close {
+  background-image: url(../images/close.png); }
 
 header {
   background-image: url(../images/concert-photo.jpg);

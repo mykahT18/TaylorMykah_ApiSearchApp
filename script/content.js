@@ -2,6 +2,8 @@ var submit = document.querySelector('.search-button');
 var search = document.querySelector('.searchInput');
 var resultItems = document.querySelector('.results');
 var message = document.querySelector('.messageResults');
+var nav = document.querySelector('.mainNav'); 
+var menu = document.querySelector('.ham');
 
 submit.addEventListener('click', function(e){
 	e.preventDefault();
@@ -65,12 +67,26 @@ function renderPage(results){
 		
 	
 }
+function showNav(event){
+
+    event.preventDefault();    
+    var target = event.target;
+
+    //checking if it is open
+    if(nav.classList.contains("active")){
+    	nav.classList.remove('active');
+    	menu.classList.remove('close');
+
+    } else {
+    	nav.className += ' active';
+	    target.className += ' close';
+    }
+   
+
+}
+
+    var el = document.querySelector('.ham');
+    el.addEventListener('click', showNav); 
+
 
 		
-	
-// results.forEach((result, index, array) => {
-// 		var listItem = document.createElement('li');
-// 		listItem.innerHTML = result.name;
-// 		
-
-	// })

@@ -39,16 +39,22 @@ a{
 	display: flex;
 	flex-basis: 100%;
 	flex-wrap: wrap;
-	
+	min-height: 50rem;
 }
 article img{
     width: 50%;
     height: 100%;
+
+    @include screen(med){
+		width: 100%;
+		height: auto;
+	}
 }
 article div {
 	h3{
 		@include margin(0.8rem, 0rem, 0.5rem, 0.5rem);
 		font-weight: bold;
+		text-transform: uppercase;
 	}
 	p{
 		@include margin(0.8rem, 0rem, 0.5rem, 0.5rem);
@@ -64,10 +70,13 @@ article {
 	@include screen(med){
 
 		flex-basis: 48%;
+		flex-direction: column;
+		flex-wrap: wrap;
 	}
 	@include screen(large){
 
 		flex-basis: 32%;
+
 	}
 	
 }
@@ -76,7 +85,7 @@ form{
 	display: flex;
 	flex-wrap: wrap;
 	width: 80%;
-    @include margin(4rem, auto, 0rem, auto);
+    @include margin(0rem, auto, 0rem, auto);
 }
 .label-holder{
 	background-color: $bg-color;
@@ -127,8 +136,15 @@ form{
 }
 .messageResults{
 	background-color: #e8e8e8;
-	@include padding(1rem, 3.9rem, 1rem, 3.9rem);
+	@include padding(3rem, 3.9rem, 3rem, 3.9rem);
 	flex-basis: 100%;
 	text-align: center;
+	font-weight: bold;
+	font-size: 2rem;
+
+	@include screen(med){
+
+    	font-size: 3rem;
+    }
 }
 
