@@ -125,11 +125,7 @@ article {
   margin-top: 1rem;
   margin-right: auto;
   margin-bottom: 1rem;
-  margin-left: auto;
-  padding-top: 0rem;
-  padding-right: 0rem;
-  padding-bottom: 1rem;
-  padding-left: 0rem; }
+  margin-left: auto; }
   @media only screen and (min-width: 600px) {
     article {
       -ms-flex-preferred-size: 48%;

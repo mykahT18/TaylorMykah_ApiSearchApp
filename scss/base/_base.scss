@@ -55,7 +55,6 @@ article {
 	display: flex;
 	width: 100%;
     @include margin(1rem, auto, 1rem, auto);
-    @include padding(0rem, 0rem, 1rem, 0rem);
 
 	@include screen(med){
 
