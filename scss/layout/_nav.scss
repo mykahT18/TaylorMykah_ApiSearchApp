@@ -27,7 +27,7 @@ nav {
     height: 20.2rem;
 
     ul{
-    	@include padding(4rem, 1rem, 1rem, 0rem);
+    	@include padding(5rem, 2rem, 1rem, 0rem);
     }
     .logo{
     	display: none;
@@ -38,7 +38,7 @@ nav {
 }
 .active li{
 	display: block;
-	line-height: 3.5rem;
+	line-height: 3rem;
 	font-size: 2rem;
 	
 }
@@ -49,7 +49,7 @@ nav {
 	background-repeat: no-repeat;
 	background-size: contain;
 	@include padding(1rem, 1rem, 1rem, 1rem);
-	@include margin(2rem, 2rem, 0rem, 0rem);
+	@include margin(1rem, 2rem, 0rem, 0rem);
 
 	@include screen(med){
 		display: none;
@@ -57,6 +57,7 @@ nav {
 }
 .close{
 	background-image: url(../images/close.png);
+	margin-top: 3rem;
 }
 
 header{
@@ -83,6 +84,8 @@ header .logo{
     top: 1.5rem;
     left: 6rem;
     font-size: 1.8rem;
+    text-decoration: none;
+    
 
     @include screen(med){
     	top: 0rem;

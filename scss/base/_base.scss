@@ -28,6 +28,7 @@ a{
 	flex-basis: 100%;
 	flex-wrap: wrap;
 	min-height: 50rem;
+	margin: 0 10%;
 }
 article img{
     width: 50%;
@@ -54,21 +55,25 @@ article {
 	background: $color-prime;
 	display: flex;
 	width: 100%;
-    @include margin(1rem, auto, 1rem, auto);
+    @include margin(1rem, 1rem, 1rem, 0rem);
 
 	@include screen(med){
 
-		flex-basis: 48%;
+		flex-basis: 47.4%;
 		flex-direction: column;
 		flex-wrap: wrap;
 	}
 	@include screen(large){
 
-		flex-basis: 32%;
+		flex-basis: 31.2%;
 
+	}
+	@include screen(Xlarge){
+		flex-basis: 31.4%;
 	}
 	
 }
+
 //==========Form=========//
 form{
 	display: flex;
@@ -132,9 +137,9 @@ form{
 }
 .messageResults{
 	background-color: #e8e8e8;
-	@include padding(3rem, 3.9rem, 3rem, 3.9rem);
+	@include padding(2rem, 0rem, 2rem, 0rem);
 	@include margin(1rem, 0rem, 0rem, 0rem);
-	flex-basis: 100%;
+	flex-basis: 96%;
 	text-align: center;
 	font-weight: bold;
 	font-size: 2rem;
