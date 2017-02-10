@@ -4,3 +4,25 @@
   margin-bottom: $bottom;
   margin-left: $left;
 }
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+  }
+ @mixin screen($myScreen) {
+
+    @if $myScreen == "med"{
+
+        @media only screen and (min-width: 600px)  { @content;} 
+
+    } 
+    @else if $myScreen == "large"{
+
+        @media only screen and (min-width: 1000px) { @content; } 
+    }
+    @else if $myScreen == "Xlarge"{
+
+        @media only screen and (min-width: 1440px) { @content; } 
+    }
+}

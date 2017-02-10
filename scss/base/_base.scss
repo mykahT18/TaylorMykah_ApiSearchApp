@@ -5,23 +5,16 @@ html {
   min-width: 320px;
 }
 body {
-	margin: 0px 0px;
-	// background: $bg-color;
+	@include margin(0rem, 0rem, 0rem, 0rem);
+	font-size: $font-size;
 	width: 100%;
+
+	@include screen(large){
+
+		background-color: $bg-color;
+	}
 }
-header .logo{
-    color: $font-color-prime;
-    background-image: url(../images/turntable.png);
-    background-repeat: no-repeat;
-    font-size: 1.2rem;
-    text-indent: 35px;
-    margin-left: 3rem;
-    padding-top: 0.6rem;
-    position: absolute;
-    top: 0.9rem;
-    left: 1rem;
-}
-a{
+nav ul li a{
 	text-decoration: none;
 	color: $font-color-prime;
 
@@ -31,51 +24,129 @@ a{
 }
 // section
 .results{
-	
-
-}
-p{
-	color: $font-color-prime;
+	display: flex;
+	flex-basis: 100%;
+	flex-wrap: wrap;
+	min-height: 50rem;
+	margin: 0 10%;
 }
 article img{
-	 
-	 
-}
-label{
-	background-color: $bg-color;
-	padding: 0.2rem 0.2rem;
-	margin-left: 0.4rem;
-	font-size: $phone-font-size;
-}
-form{
-	margin-top: 4rem;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+    width: 50%;
+    height: 100%;
 
+    @include screen(med){
+		width: 100%;
+		height: auto;
+	}
 }
-article div{
+article div {
+	h3{
+		@include margin(0.8rem, 0rem, 0.5rem, 0.5rem);
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	p{
+		@include margin(0.8rem, 0rem, 0.5rem, 0.5rem);
+		font-weight: none;
+	}
+}
+
+article {
 	background: $color-prime;
-    width: 100%;
-}
-input::-webkit-input-placeholder{
+	display: flex;
+	width: 100%;
+    @include margin(1rem, 1rem, 1rem, 0rem);
+
+	@include screen(med){
+
+		flex-basis: 47.4%;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	@include screen(large){
+
+		flex-basis: 31.2%;
+
+	}
+	@include screen(Xlarge){
+		flex-basis: 31.4%;
+	}
 	
 }
-.searchInput{
-	@include margin(0rem, 0rem, 0.5rem, 0.4rem);
-	// margin-left: 0.4rem;
-	outline: none;
-	border: none;
-    padding: 0.4rem 2.3rem;
-	// margin-bottom: 0.5rem;
-	// background-color: blue;
-	text-align: center;
+
+//==========Form=========//
+form{
+	display: flex;
+	flex-wrap: wrap;
+	width: 80%;
+    @include margin(3rem, auto, 0rem, auto);
+}
+.label-holder{
+	background-color: $bg-color;
+	color: $font-color-prime;
+	font-size: $font-size;
+	flex-basis: 100%;
+	@include padding(1rem, 0rem, 0.2rem, 0.4rem);
+
+	@include screen(med){
+
+    	 font-size: 1.6rem;
+    }
+}
+.button-holder{
+	flex: 1 0 90px;
+
+}
+.input-holder{
+	color: $font-color-prime;
+	flex: 2 0 250px;
 }
 .search-button{
-	// background: red;
+	@include margin(0rem, 2.3rem, 2rem, 0rem);
     border: none;
-    padding: 0.7rem 0.4rem;
-    margin-right: 0.2rem;
-    
+    background-color: $color-prime;
+    flex-basis: 100%;
+    width: 100%;
+    font-size: 1.6em;
+    @include padding(1.5rem, 0rem, 1.5rem, 0rem);
+
+     @include screen(med){
+
+    	 @include padding(2rem, 0rem, 2rem, 0rem);
+    }
+}
+.search-button:hover{
+	background: $color-second;
+}
+.searchInput{
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    @include padding(1.5rem, 0rem, 1.3rem, 0rem);
+    outline: none;
+    border: none;
+    text-align: center;
+    width: 100%;
+    flex-basis: 100%;
+    font-size: 1.5em;
+
+     @include screen(med){
+
+    	 @include padding(2rem, 0rem, 1.8rem, 0rem);
+    }
+
+}
+.messageResults{
+	background-color: #e8e8e8;
+	@include padding(2rem, 0rem, 2rem, 0rem);
+	@include margin(1rem, 0rem, 0rem, 0rem);
+	flex-basis: 96%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2rem;
+
+	@include screen(med){
+
+    	font-size: 3rem;
+    }
 }
 

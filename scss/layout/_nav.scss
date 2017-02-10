@@ -1,30 +1,111 @@
 nav {
-	
+	position: relative;
+	@include padding(1rem, 0rem, 1rem, 0rem);
+    top: -20px;
 
 	ul li{
+		display: none;
+		@include padding(0rem, 0rem, 0rem, 1rem);
+		@include margin(0rem, 2rem, 0rem, 0rem);
+    	text-align: right;
+
+    	@include screen(med){
+		display: inline;
+		float: right;
+		font-size: 1.6rem;
 		
 	}
+
 }
-ul{
+
+	&:after{@extend %clear};
+}
+.mainNav.active{
+	position: absolute;
+	background: #111;   
+    width: 100%;
+    height: 23.2rem;
+
+    ul{
+    	@include padding(5rem, 2rem, 1rem, 0rem);
+    }
+    .logo{
+    	display: none;
+    }
+    @media(min-width: 425px){
+    	height: 18.4rem;
+    }
+}
+.active li{
+	display: block;
+	line-height: 3rem;
+	font-size: 2rem;
 	
 }
+.logo-link{
+	text-decoration: none;
+	color: $font-color-prime;
+}
+.ham {
+
+	float: right;
+	background-image: url(../images/hamburger.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	@include padding(1rem, 1rem, 1rem, 1rem);
+	@include margin(1rem, 2rem, 0rem, 0rem);
+
+	@include screen(med){
+		display: none;
+	}
+}
+.close{
+	background-image: url(../images/close.png);
+	margin-top: 3rem;
+}
+
 header{
 	background-image: url(../images/concert-photo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 2rem;
+    @include padding(2rem, 0rem, 2rem, 0rem);
+
+
+	@include screen(med){
+
+		@include padding(6rem, 0rem, 6rem, 0rem);
+	}
+}
+header .logo{
+	position: absolute;
+    color: $font-color-prime;
+    background-image: url(../images/turntable.png);
+    background-repeat: no-repeat;
+    text-indent: 32px;
+    @include margin(0rem, 0rem, 0rem, 3rem);
+    @include padding(1.6rem, 0rem, 0rem, 0rem);
+    top: 1.5rem;
+    left: 6rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+
+
+    @include screen(med){
+    	top: 0rem;
+    }
+
 }
 
 footer{
 	background: $color-prime;
 	color: $font-color-prime;
-	// width: 100%;
+	margin-top: 1rem;
 	
 	p{
-		padding: 1rem 0.3rem;
+		@include padding(2rem, 0.3rem, 2rem, 0.3rem);
 		text-align: center;
-		font-size: $phone-font-size;
+		font-size: $font-size;
 	}
 }
 

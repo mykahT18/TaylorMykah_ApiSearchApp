@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- <link rel="stylesheet" href="base/_reset.scss.css"> -->
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:600" rel="stylesheet">
 	<link rel="stylesheet" href="CSS/main.css">
 	<meta charset="UTF-8">
@@ -10,27 +9,31 @@
 </head>
 <body>
 	<header>
-		<h1 class="logo">Chansons</h1>
-		<nav>
+		<nav class="mainNav">
+			<h1 class="logo"><a href="#" class="logo-link">Chansons</a></h1>
+			<a href="#"class="ham"></a>
 			<ul>
-				<!-- <li><a href="#">Home</a></li>
+				<li><a href="#">Home</a></li>
 				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li> -->
+				<li><a href="#">Contact</a></li>
 			</ul>
 		</nav>
-
 		<form action="submit">
-		<p>
-			<label for="searchInput">Search for albumns from your favorite band</label>
-			<input class="searchInput" id="searchInput" type="text" placeholder="ex. Backstreet Boys">
-		</p>
-		<button class="search-button">Search</button>
+			<p class="label-holder">
+				<label for="searchInput">Search for albums from your favorite band</label>
+			</p>
+			<p class="input-holder">
+				<input class="searchInput" id="searchInput" type="text" placeholder="ex. Backstreet Boys">
+			</p>
+			<p class="button-holder">
+				<button class="search-button">Search</button>
+			</p>
 	</form>
 
 	</header>	
 
 	<section class="results">
-		<h2 class="messageResults"></h2>
+		<h2 class="messageResults">Welcome! Search for any artisit you want!</h2>
 	</section>
 
 	<footer>
