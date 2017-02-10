@@ -79,10 +79,10 @@ body {
     body {
       background-color: #000000; } }
 
-a {
+nav ul li a {
   text-decoration: none;
   color: #ffffff; }
-  a:hover {
+  nav ul li a:hover {
     color: #84bd00; }
 
 .results {
@@ -150,7 +150,7 @@ form {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 80%;
-  margin-top: 0rem;
+  margin-top: 3rem;
   margin-right: auto;
   margin-bottom: 0rem;
   margin-left: auto; }
@@ -269,9 +269,9 @@ nav {
 
 .mainNav.active {
   position: absolute;
-  background: #333;
+  background: #111;
   width: 100%;
-  height: 20.2rem; }
+  height: 23.2rem; }
   .mainNav.active ul {
     padding-top: 5rem;
     padding-right: 2rem;
@@ -281,12 +281,16 @@ nav {
     display: none; }
   @media (min-width: 425px) {
     .mainNav.active {
-      height: 15.4rem; } }
+      height: 18.4rem; } }
 
 .active li {
   display: block;
   line-height: 3rem;
   font-size: 2rem; }
+
+.logo-link {
+  text-decoration: none;
+  color: #ffffff; }
 
 .ham {
   float: right;
@@ -349,7 +353,8 @@ header .logo {
 
 footer {
   background: #84bd00;
-  color: #ffffff; }
+  color: #ffffff;
+  margin-top: 1rem; }
   footer p {
     padding-top: 2rem;
     padding-right: 0.3rem;

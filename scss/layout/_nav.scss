@@ -22,9 +22,9 @@ nav {
 }
 .mainNav.active{
 	position: absolute;
-	background: #333;   
+	background: #111;   
     width: 100%;
-    height: 20.2rem;
+    height: 23.2rem;
 
     ul{
     	@include padding(5rem, 2rem, 1rem, 0rem);
@@ -33,7 +33,7 @@ nav {
     	display: none;
     }
     @media(min-width: 425px){
-    	height: 15.4rem;
+    	height: 18.4rem;
     }
 }
 .active li{
@@ -41,6 +41,10 @@ nav {
 	line-height: 3rem;
 	font-size: 2rem;
 	
+}
+.logo-link{
+	text-decoration: none;
+	color: $font-color-prime;
 }
 .ham {
 
@@ -85,7 +89,7 @@ header .logo{
     left: 6rem;
     font-size: 1.8rem;
     text-decoration: none;
-    
+
 
     @include screen(med){
     	top: 0rem;
@@ -96,6 +100,7 @@ header .logo{
 footer{
 	background: $color-prime;
 	color: $font-color-prime;
+	margin-top: 1rem;
 	
 	p{
 		@include padding(2rem, 0.3rem, 2rem, 0.3rem);

@@ -14,7 +14,7 @@ body {
 		background-color: $bg-color;
 	}
 }
-a{
+nav ul li a{
 	text-decoration: none;
 	color: $font-color-prime;
 
@@ -79,7 +79,7 @@ form{
 	display: flex;
 	flex-wrap: wrap;
 	width: 80%;
-    @include margin(0rem, auto, 0rem, auto);
+    @include margin(3rem, auto, 0rem, auto);
 }
 .label-holder{
 	background-color: $bg-color;
